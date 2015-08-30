@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe PeopleController, type: :controller do
 
+  it_behaves_like "api_controller"
+
   let!(:person) { create(:person)}
 
 
