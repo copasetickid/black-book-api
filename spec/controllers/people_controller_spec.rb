@@ -2,7 +2,14 @@ require 'rails_helper'
 
 RSpec.describe PeopleController, type: :controller do
 
+  before do
+    let!(:user) { create(:user) }
+    request.env["HTTP_X_USER_EMAIL"] = user.email
+    request.env["HTTP_X_AUTH_TOKEN"] = authentication_token.body
+  end
+
   it_behaves_like "api_controller"
+  it_behaves_like "authenticated_api_controller"
 
   let!(:person) { create(:person)}
 
