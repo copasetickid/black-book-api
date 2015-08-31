@@ -24,6 +24,7 @@ end
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'bcrypt', '~> 3.1.7' # To use ActiveModel has_secure_password
 gem 'has_secure_token'
+gem 'warden'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
