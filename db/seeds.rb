@@ -7,3 +7,5 @@
 ].each do |person_attributes|
   Person.create(person_attributes)
 end
+
+User.create(email: "admin@example.com", password: "password")
